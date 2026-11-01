@@ -8,7 +8,7 @@ Yapay zekâ ajanları Türk Bayrağını çizerken hep bir yerini kaçırıyor: 
 
 ## Neler var
 
-- `skills/ay-yildiz/SKILL.md`: kurallar, ay yıldızı kalkan, rozet ya da ikon gibi başka bir tasarıma yerleştirme, animasyon ipuçları, Kanun'un bayrağın kullanılmasını yasakladığı yerler ve iş bitmeden önce bakılacak kontrol listesi.
+- `skills/ay-yildiz/SKILL.md`: kurallar, ay yıldızı kalkan, rozet ya da ikon gibi başka bir tasarıma yerleştirme, animasyon ipuçları ve iş bitmeden önce bakılacak kontrol listesi.
 - `skills/ay-yildiz/assets/`: bayrağın tamamı ve sadece ay yıldız, SVG olarak.
 - `skills/ay-yildiz/references/construction.md`: Kanun'a ekli resmî ölçü cetveli ve vektördeki her sayının nereden geldiği.
 - `skills/ay-yildiz/references/official-table.png`: Kanun'daki resmî çizim ve cetvel.

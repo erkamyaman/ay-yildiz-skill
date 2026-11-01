@@ -54,10 +54,6 @@ To place the crescent and star on a shield, badge, button or icon, wrap both pat
 7. Use `#E30A17`. Not `red`, `#FF0000` or a brand red.
 8. A whole flag is 3:2 (width 1.5 G). Don't crop or stretch it to fit a square. Put it in a 3:2 box or use the crescent and star alone.
 
-## Where the law says it can't go
-
-Law No. 2893, article 7, forbids using the flag torn, dirty or faded; as a table or lectern cover (except at official oath ceremonies); on anything sat or stepped on, or putting its shape on such things; worn as clothing or a uniform; and as the base or background of the emblem, pennant or symbol of a political party, association, foundation or other non-public organisation. If a request is for one of these (a doormat, a seat cushion, a T-shirt that is the flag, a company logo built on the flag), say so before drawing it. This is a heads-up, not legal advice.
-
 ## Animating it
 
 - The final frame has to be the exact static vector, with no leftover stroke, dash, scale or rotation.

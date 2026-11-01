@@ -1,0 +1,103 @@
+---
+name: turkish-flag
+description: Draw the Turkish flag (Türk bayrağı) or its crescent and star (ay yıldız) exactly as the Turkish Flag Law defines it, from a verified vector instead of from memory. Trigger whenever an SVG, icon, logo, badge, favicon, illustration, CSS or canvas drawing, or animation contains the flag of Turkey or its crescent and star, or when asked to fix, check or animate one.
+license: MIT
+metadata:
+  author: erkamyaman
+  version: '1.0'
+---
+
+# Turkish flag
+
+Models drawing the crescent and star from memory get it almost right: the inner circle is shifted, the star is too big or turned, the red is off. Almost right is wrong for a national flag. Never draw these shapes by hand. Copy the vector below and only scale or move it as one piece.
+
+## The vector
+
+Coordinates are in units where the flag's width (hoist height) G = 60000. The flag spans x 0 to 90000 and y -30000 to 30000, so its centre line is y = 0.
+
+```svg
+<!-- crescent -->
+<path d="M42675 8021a15000 15000 0 1 1 0-16042 12000 12000 0 1 0 0 16042z"/>
+<!-- star -->
+<path d="M41750 0l13568-4408-8386 11541V-7133l8386 11541z"/>
+```
+
+Full flag: [assets/flag-of-turkey.svg](assets/flag-of-turkey.svg). Crescent and star only, tightly cropped: [assets/crescent-and-star.svg](assets/crescent-and-star.svg).
+
+Colours: red `#E30A17` (RGB 227 10 23, close to Pantone 186 C), white `#FFFFFF`. The law itself gives no colour code; see [references/construction.md](references/construction.md#colour).
+
+These paths come from the Wikimedia Commons file `Flag_of_Turkey.svg`. They match the official construction table attached to Law No. 2893 (Türk Bayrağı Kanunu, 1983), reproduced in [references/construction.md](references/construction.md). Check any change against that table.
+
+## Putting it somewhere else
+
+To place the crescent and star on a shield, badge, button or icon, wrap both paths in one group and use one transform:
+
+```svg
+<g fill="#fff" transform="translate(CX CY) scale(S) translate(-35159 0)">
+  <path d="M42675 8021a15000 15000 0 1 1 0-16042 12000 12000 0 1 0 0 16042z"/>
+  <path d="M41750 0l13568-4408-8386 11541V-7133l8386 11541z"/>
+</g>
+```
+
+- `35159 0` is the centre of the emblem's bounding box (x 15000 to 55318, y -15000 to 15000), so `CX CY` is where its centre lands.
+- `S = targetWidth / 40318`. Example: 300 px wide means `S = 0.00744`.
+- Use the same scale on both axes. Never stretch.
+
+## Rules
+
+1. Copy the path data exactly. Don't round, simplify, re-type or redraw it, and don't rebuild it from `<circle>` elements and a star polygon unless you check every number against the construction sheet.
+2. Move, scale and rotate the crescent and star together, never one alone. The gap between them is part of the law.
+3. The star has one point aimed straight at the crescent (pointing to the hoist). Don't turn it.
+4. The crescent opens toward the fly (away from the pole). If the design is mirrored for a right-to-left layout, still don't mirror the flag.
+5. Fill only. No `stroke` on the white shapes: a stroke, especially with `stroke-linejoin="round"`, rounds the star's tips and fattens the crescent.
+6. Keep the default `fill-rule` (nonzero). The star path crosses itself, and `fill-rule="evenodd"` punches a pentagon hole in its middle.
+7. Use `#E30A17`. Not `red`, `#FF0000` or a brand red.
+8. A whole flag is 3:2 (width 1.5 G). Don't crop or stretch it to fit a square. Put it in a 3:2 box or use the crescent and star alone.
+
+## Where the law says it can't go
+
+Law No. 2893, article 7, forbids using the flag torn, dirty or faded; as a table or lectern cover (except at official oath ceremonies); on anything sat or stepped on, or putting its shape on such things; worn as clothing or a uniform; and as the base or background of the emblem, pennant or symbol of a political party, association, foundation or other non-public organisation. If a request is for one of these (a doormat, a seat cushion, a T-shirt that is the flag, a company logo built on the flag), say so before drawing it. This is a heads-up, not legal advice.
+
+## Animating it
+
+- The final frame has to be the exact static vector, with no leftover stroke, dash, scale or rotation.
+- Reveal shapes with a mask (a sweep, a wipe, a growing circle) instead of drawing outlines with `stroke-dashoffset`. Outline drawing leaves a seam where the dash ends.
+- To animate the star, scale or rotate it around its own centre `(49250, 0)` and end at scale 1, rotation 0 (or any multiple of 72°).
+- Respect `prefers-reduced-motion` by showing the static vector.
+
+Example: crescent sweeps in, then the star spins into place, ending on the exact shape:
+
+```svg
+<defs>
+  <mask id="sweep" maskUnits="userSpaceOnUse" x="14000" y="-16000" width="32000" height="32000">
+    <circle cx="30000" cy="0" r="7600" fill="none" stroke="#fff" stroke-width="15200"
+      pathLength="1" stroke-dasharray="1" stroke-dashoffset="1">
+      <animate attributeName="stroke-dashoffset" values="1;0" dur="0.9s" fill="freeze"/>
+    </circle>
+  </mask>
+</defs>
+<g fill="#fff" transform="translate(CX CY) scale(S) translate(-35159 0)">
+  <path mask="url(#sweep)" d="M42675 8021a15000 15000 0 1 1 0-16042 12000 12000 0 1 0 0 16042z"/>
+  <g transform="translate(49250 0)">
+    <g transform="scale(0)">
+      <animateTransform attributeName="transform" type="scale" values="0;1.15;1" keyTimes="0;0.7;1" begin="0.7s" dur="0.6s" fill="freeze"/>
+      <g>
+        <animateTransform attributeName="transform" type="rotate" values="-144;0" begin="0.7s" dur="0.6s" fill="freeze"/>
+        <path transform="translate(-49250 0)" d="M41750 0l13568-4408-8386 11541V-7133l8386 11541z"/>
+      </g>
+    </g>
+  </g>
+</g>
+```
+
+The mask circle is stroked, but it is inside the mask, so no stroke shows on the crescent.
+
+## Checking a drawing
+
+Before you finish, compare against the vector:
+
+- Both path `d` strings are byte-for-byte the ones above (or the shapes come from the asset files).
+- Exactly one uniform `scale` on the shared group, no `skew`, no non-uniform scale.
+- No `stroke` and no `fill-rule="evenodd"` on the white shapes.
+- Red is `#E30A17`.
+- Render it and look: the star's left tip points into the crescent's opening, and the tips are sharp.

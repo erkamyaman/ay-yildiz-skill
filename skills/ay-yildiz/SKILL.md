@@ -1,5 +1,5 @@
 ---
-name: turkish-flag
+name: ay-yildiz
 description: Draw the Turkish flag (Türk bayrağı) or its crescent and star (ay yıldız) exactly as the Turkish Flag Law defines it, from a verified vector instead of from memory. Trigger whenever an SVG, icon, logo, badge, favicon, illustration, CSS or canvas drawing, or animation contains the flag of Turkey or its crescent and star, or when asked to fix, check or animate one.
 license: MIT
 metadata:

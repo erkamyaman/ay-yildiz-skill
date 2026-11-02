@@ -4,7 +4,7 @@ description: Draw the Turkish flag (Türk bayrağı) or its crescent and star (a
 license: MIT
 metadata:
   author: erkamyaman
-  version: '1.0'
+  version: '1.1'
 ---
 
 # Turkish flag
@@ -24,9 +24,9 @@ Coordinates are in units where the flag's width (hoist height) G = 60000. The fl
 
 Full flag: [assets/flag-of-turkey.svg](assets/flag-of-turkey.svg). Crescent and star only, tightly cropped: [assets/crescent-and-star.svg](assets/crescent-and-star.svg).
 
-Colours: red `#E30A17` (RGB 227 10 23, close to Pantone 186 C), white `#FFFFFF`. The law itself gives no colour code; see [references/construction.md](references/construction.md#colour).
+Colours on screen: red `#DC0D15`, white `#FFFFFF`. No government source defines a screen colour for the flag. `#DC0D15` is the value the Interior Ministry publishes for the colour it calls flag red. The legal definition of the red is a set of cloth coordinates in the regulation; see [references/construction.md](references/construction.md#colour).
 
-These paths come from the Wikimedia Commons file `Flag_of_Turkey.svg`. They match the official construction table attached to Law No. 2893 (Türk Bayrağı Kanunu, 1983), reproduced in [references/construction.md](references/construction.md). Check any change against that table.
+These paths are computed from the official construction table attached to Law No. 2893 (Türk Bayrağı Kanunu, 1983), reproduced in [references/construction.md](references/construction.md). Check any change against that table. The star's position follows E = G/3; the construction sheet explains a small conflict in the official texts.
 
 ## Putting it somewhere else
 
@@ -51,7 +51,7 @@ To place the crescent and star on a shield, badge, button or icon, wrap both pat
 4. The crescent opens toward the fly (away from the pole). If the design is mirrored for a right-to-left layout, still don't mirror the flag.
 5. Fill only. No `stroke` on the white shapes: a stroke, especially with `stroke-linejoin="round"`, rounds the star's tips and fattens the crescent.
 6. Keep the default `fill-rule` (nonzero). The star path crosses itself, and `fill-rule="evenodd"` punches a pentagon hole in its middle.
-7. Use `#E30A17`. Not `red`, `#FF0000` or a brand red.
+7. Use `#DC0D15`. Not `red`, `#FF0000` or a brand red.
 8. A whole flag is 3:2 (width 1.5 G). Don't crop or stretch it to fit a square. Put it in a 3:2 box or use the crescent and star alone.
 
 ## Animating it
@@ -95,5 +95,5 @@ Before you finish, compare against the vector:
 - Both path `d` strings are byte-for-byte the ones above (or the shapes come from the asset files).
 - Exactly one uniform `scale` on the shared group, no `skew`, no non-uniform scale.
 - No `stroke` and no `fill-rule="evenodd"` on the white shapes.
-- Red is `#E30A17`.
+- Red is `#DC0D15`.
 - Render it and look: the star's left tip points into the crescent's opening, and the tips are sharp.

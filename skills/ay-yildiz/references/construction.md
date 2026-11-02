@@ -2,12 +2,14 @@
 
 The flag's shape is set by the table attached to the Turkish Flag Law, Law No. 2893 (Türk Bayrağı Kanunu, accepted 22/9/1983, Resmî Gazete 24/9/1983, no. 18171). Article 10 repeals the earlier flag law, No. 2994 of 29 May 1936. Article 2: the Turkish flag is the white crescent-and-star red flag, in the shapes and proportions shown in the attached table. The table's note: whatever the flag's width, the G ratios don't change.
 
+Details are in the Türk Bayrağı Tüzüğü (No. 85/9034), called "the regulation" here. KHK 700 changed the law's word "tüzük" to "yönetmelik" in 2018, and a transitional article keeps existing tüzükler in force until they're repealed. I found no replacement yönetmelik, so this skill uses the Tüzük.
+
 The official drawing and table: [official-table.png](official-table.png). Translated, with letters as in the law and each value in vector units where G = 60000:
 
 | Letter | Official text | Meaning | Value | Vector units |
 |---|---|---|---|---|
 | G | Genişlik | Width of the flag (height along the pole) | G | 60000 |
-| A | Ayın dış çemberi merkezinin uçkurluktan uzaklığı | Distance from the hem to the centre of the outer crescent circle | 1/2 G | 30000 |
+| A | Ayın dış çemberi merkezinin uçkurlurluktan [sic] uzaklığı | Distance from the hem to the centre of the outer crescent circle | 1/2 G | 30000 |
 | B | Ayın dış çemberinin çapı | Diameter of the outer crescent circle | 1/2 G | 30000 (r 15000) |
 | C | Ayın iç ve dış çemberlerinin merkezleri arasındaki uzaklık | Distance between the centres of the inner and outer crescent circles | 0.0625 G | 3750 |
 | D | Ayın iç çemberinin çapı | Diameter of the inner crescent circle | 0.4 G | 24000 (r 12000) |
@@ -32,7 +34,7 @@ The official texts disagree slightly, and no drawing can satisfy both rules.
 - E = G/3: the law's table and Article 4(G) of the regulation both give this number. It puts the star's tip at x = 41750.
 - Article 4(G) of the regulation also says the tip lies where the centre line meets the line through the crescent's two tips, and the official drawing shows it there. With the table's numbers, that line is at x = 42675.
 
-The two differ by 925 units, about 1.5% of G. This skill follows E = G/3, because it's the stated number in both texts, and the Ministry of National Education's flag pattern guide measures the star this way, from the inner circle's crossing of the centre line.
+The two differ by 925 units, about 1.5% of G, and no text says which one wins. This skill follows E = G/3, which is a judgement: it's the stated number in both texts, and the Ministry of National Education's flag pattern guide measures the star this way, from the inner circle's crossing of the centre line. The drawing isn't to scale, and the regulation's size chart has no E column, so neither settles it.
 
 ## The white hem
 
@@ -49,14 +51,14 @@ Law No. 2893 says "al" (red) and "beyaz" (white) and gives no colour code. Artic
 - Red: lightness 27.5, red-green 44.8, yellow-blue 15.6, with a difference of at most 3 NBS.
 - White: twice the reflectance at 460 nm minus the reflectance at 620 nm must be at least 15% for silk and synthetic blends, and at least 60% for other cloth.
 
-The regulation doesn't name the colour scale or the illuminant, so these values have no single exact screen equivalent. Read as CIELAB or Hunter Lab, they convert to a much darker red, roughly `#7F152C` to `#9D0C1A`. Those are conversions, not official values. Fabric details are left to a mandatory Turkish Standard, which the regulation doesn't number.
+The regulation doesn't name the colour scale or the illuminant, so these values have no single exact screen equivalent. Read as CIELAB or Hunter Lab, they convert to a much darker red, roughly `#7F152C` to `#9C1411`. Those are my conversions, not official values. Fabric details are left to a mandatory Turkish Standard, which the regulation doesn't number.
 
-For screens use `#DC0D15`, with white `#FFFFFF`. No government source defines a screen colour for the flag itself. `#DC0D15` comes from the Interior Ministry, in two places:
+For screens use `#DC0D15`, with white `#FFFFFF`. This is a convention. I found no government source that defines a screen colour for the flag itself, though the Turkish Standard wasn't available to read. `#DC0D15` comes from the Interior Ministry, in two places:
 
 - Its [corporate identity page](https://www.icisleri.gov.tr/kurumsal-kimlik-kilavuz) says its logo uses one colour: "Logoda tek renk, bayrak kırmızısı uygulanmıştır."
-- Its [2026 corporate identity guide](https://www.icisleri.gov.tr/kurumlar/icisleri.gov.tr/icerikYonetimi/kurumsal-kimlik/icisleri_bakanligi_kurumsal_kimlik_final_2026.pdf), printed page 56 (PDF page 55), lists its main corporate red as `#dc0d15`, Pantone 199 C.
+- Its [2026 corporate identity guide](https://www.icisleri.gov.tr/kurumlar/icisleri.gov.tr/icerikYonetimi/kurumsal-kimlik/icisleri_bakanligi_kurumsal_kimlik_final_2026.pdf), page 55, lists its main corporate red ("Kurumsal Ana Renk") as `#dc0d15`, Pantone 199 C.
 
-Neither place states both facts, so linking them is an inference, and this is the ministry's branding, not a rule about the flag. The guide also lists RGB 218 41 28, which doesn't match that hex, so use the hex. The ministry's [2018 guide](https://www.icisleri.gov.tr/kurumlar/icisleri.gov.tr/icisleri/Kurumsal/icisleribakanligi_kurumsalkimlik.pdf) gave R 227 G 6 B 19, Pantone 185 C, for the same logo. Its current page no longer links that guide. If you need the legal colour, for cloth, use the regulation's coordinates.
+Neither place states both facts, so linking them is an inference, and this is a government identity colour, not a rule about the flag. The [Labour Ministry's guide](https://www.csgb.gov.tr/Media/klghey0a/csgb-kurumsal-kimlik.pdf) lists the same hex. The guide also lists RGB 218 41 28, which is `#DA291C` and doesn't match; this skill uses the hex because it's the value that repeats. The ministry's [2018 guide](https://www.icisleri.gov.tr/kurumlar/icisleri.gov.tr/icisleri/Kurumsal/icisleribakanligi_kurumsalkimlik.pdf) does state both facts, flag red and R 227 G 6 B 19 (`#E30613`), Pantone 185 C, but its current page no longer links that guide. If you need the legal colour, for cloth, use the regulation's coordinates.
 
 ## Sources
 
@@ -64,7 +66,8 @@ Government sources only.
 
 - Law No. 2893, Türk Bayrağı Kanunu, with the construction table: mevzuat.gov.tr, `https://www.mevzuat.gov.tr/mevzuatmetin/1.5.2893.pdf`.
 - Türk Bayrağı Tüzüğü, No. 85/9034, Articles 2, 3 and 4 and Annexes 1 and 2: mevzuat.gov.tr, `https://www.mevzuat.gov.tr/MevzuatMetin/2.5.859034.pdf`.
-- Ministry of National Education, Türk Bayrağı Kalıbı: `https://www.megep.meb.gov.tr/mte_program_modul/moduller_pdf/T%C3%BCrk%20Bayra%C4%9F%C4%B1%20Kal%C4%B1b%C4%B1.pdf`.
+- Ministry of National Education, Türk Bayrağı Kalıbı: `https://megep.meb.gov.tr/mte_program_modul/moduller_pdf/T%C3%BCrk%20Bayra%C4%9F%C4%B1%20Kal%C4%B1b%C4%B1.pdf`.
 - Interior Ministry, corporate identity page: `https://www.icisleri.gov.tr/kurumsal-kimlik-kilavuz`.
-- Interior Ministry, 2026 corporate identity guide, printed page 56: `https://www.icisleri.gov.tr/kurumlar/icisleri.gov.tr/icerikYonetimi/kurumsal-kimlik/icisleri_bakanligi_kurumsal_kimlik_final_2026.pdf`.
+- Interior Ministry, 2026 corporate identity guide, page 55: `https://www.icisleri.gov.tr/kurumlar/icisleri.gov.tr/icerikYonetimi/kurumsal-kimlik/icisleri_bakanligi_kurumsal_kimlik_final_2026.pdf`.
+- Labour Ministry, corporate identity guide: `https://www.csgb.gov.tr/Media/klghey0a/csgb-kurumsal-kimlik.pdf`.
 - Interior Ministry, 2018 corporate identity guide, printed page 8: `https://www.icisleri.gov.tr/kurumlar/icisleri.gov.tr/icisleri/Kurumsal/icisleribakanligi_kurumsalkimlik.pdf`.

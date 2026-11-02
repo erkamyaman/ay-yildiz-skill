@@ -1,0 +1,177 @@
+{
+  "title": {
+    "tr": "Türk Bayrağı ölçüleri",
+    "en": "Turkish flag construction"
+  },
+  "units": {
+    "G": 60000,
+    "origin": "x = 0 is the hem's inner edge, y = 0 is the flag's axis"
+  },
+  "table": [
+    {
+      "letter": "G",
+      "tr": "Genişlik",
+      "en": "Width of the flag (height along the pole)",
+      "ratio": "G",
+      "value": 60000
+    },
+    {
+      "letter": "A",
+      "tr": "Ayın dış çemberi merkezinin uçkurluktan uzaklığı",
+      "en": "Hem to centre of the crescent's outer circle",
+      "ratio": "1/2 G",
+      "value": 30000
+    },
+    {
+      "letter": "B",
+      "tr": "Ayın dış çemberinin çapı",
+      "en": "Diameter of the crescent's outer circle",
+      "ratio": "1/2 G",
+      "value": 30000
+    },
+    {
+      "letter": "C",
+      "tr": "Ayın iç ve dış çemberlerinin merkezleri arasındaki uzaklık",
+      "en": "Distance between the two circle centres",
+      "ratio": "0.0625 G",
+      "value": 3750
+    },
+    {
+      "letter": "D",
+      "tr": "Ayın iç çemberinin çapı",
+      "en": "Diameter of the crescent's inner circle",
+      "ratio": "0.4 G",
+      "value": 24000
+    },
+    {
+      "letter": "E",
+      "tr": "Yıldız çemberinin, ayın iç çemberinin uçkurluk yönünde ekseni kestiği noktaya uzaklığı",
+      "en": "Star's circle to where the inner circle crosses the axis on the hem side",
+      "ratio": "1/3 G",
+      "value": 20000
+    },
+    {
+      "letter": "F",
+      "tr": "Yıldız çemberinin çapı",
+      "en": "Diameter of the star's circle",
+      "ratio": "1/4 G",
+      "value": 15000
+    },
+    {
+      "letter": "L",
+      "tr": "Boy (uçkurluk dahil)",
+      "en": "Length, including the hem",
+      "ratio": "1 1/2 G",
+      "value": 90000
+    },
+    {
+      "letter": "M",
+      "tr": "Uçkurluk genişliği",
+      "en": "Width of the white hem",
+      "ratio": "1/30 G",
+      "value": 2000
+    }
+  ],
+  "circles": {
+    "outer": {
+      "cx": 30000,
+      "cy": 0,
+      "r": 15000
+    },
+    "inner": {
+      "cx": 33750,
+      "cy": 0,
+      "r": 12000
+    },
+    "star": {
+      "cx": 49250,
+      "cy": 0,
+      "r": 7500
+    }
+  },
+  "crescent_tips": [
+    [
+      42675,
+      -8021
+    ],
+    [
+      42675,
+      8021
+    ]
+  ],
+  "star_points": [
+    [
+      41750,
+      0
+    ],
+    [
+      46932,
+      -7133
+    ],
+    [
+      55318,
+      -4408
+    ],
+    [
+      55318,
+      4408
+    ],
+    [
+      46932,
+      7133
+    ]
+  ],
+  "star_position": {
+    "used": "E = G/3",
+    "tip_x": 41750,
+    "alternative": {
+      "rule": "tip on the line through the crescent's tips, Tüzük Article 4(G)",
+      "tip_x": 42675
+    },
+    "difference": 925
+  },
+  "layout": {
+    "physical": {
+      "hem": [
+        -2000,
+        0
+      ],
+      "red": [
+        0,
+        88000
+      ],
+      "total_length": 90000
+    },
+    "screen": {
+      "red": [
+        0,
+        90000
+      ],
+      "hem": null
+    }
+  },
+  "paths": {
+    "crescent": "M42675 8021a15000 15000 0 1 1 0-16042 12000 12000 0 1 0 0 16042z",
+    "star": "M41750 0l13568-4408-8386 11541V-7133l8386 11541z",
+    "fill_rule": "nonzero"
+  },
+  "colour": {
+    "screen": {
+      "red": "#DC0D15",
+      "white": "#FFFFFF",
+      "status": "convention, not the legal colour"
+    },
+    "legal_cloth_red": {
+      "lightness": 27.5,
+      "red_green": 44.8,
+      "yellow_blue": 15.6,
+      "max_difference_nbs": 3,
+      "scale_named": false
+    },
+    "source": "Türk Bayrağı Tüzüğü Article 3(B)"
+  },
+  "sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.2893.pdf",
+    "https://www.mevzuat.gov.tr/MevzuatMetin/2.5.859034.pdf"
+  ]
+}

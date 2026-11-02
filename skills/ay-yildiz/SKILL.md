@@ -24,7 +24,7 @@ Coordinates are in units where the flag's width (hoist height) G = 60000. The fl
 
 Full flag: [assets/flag-of-turkey.svg](assets/flag-of-turkey.svg). Crescent and star only, tightly cropped: [assets/crescent-and-star.svg](assets/crescent-and-star.svg).
 
-Colours on screen: red `#DC0D15`, white `#FFFFFF`. No government source defines a screen colour for the flag. `#DC0D15` is the value the Interior Ministry publishes for the colour it calls flag red. The legal definition of the red is a set of cloth coordinates in the regulation; see [references/construction.md](references/construction.md#colour).
+Colours on screen: red `#DC0D15`, white `#FFFFFF`. No government source defines a screen colour for the flag. `#DC0D15` comes from the [Interior Ministry's identity guide](https://www.icisleri.gov.tr/kurumsal-kimlik-kilavuz), whose logo colour the ministry calls flag red. The legal definition of the red is a set of cloth coordinates in the regulation; see [references/construction.md](references/construction.md#colour).
 
 These paths are computed from the official construction table attached to Law No. 2893 (Türk Bayrağı Kanunu, 1983), reproduced in [references/construction.md](references/construction.md). Check any change against that table. The star's position follows E = G/3; the construction sheet explains a small conflict in the official texts.
 

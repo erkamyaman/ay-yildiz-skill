@@ -51,7 +51,12 @@ Law No. 2893 says "al" (red) and "beyaz" (white) and gives no colour code. Artic
 
 The regulation doesn't name the colour scale or the illuminant, so these values have no single exact screen equivalent. Read as CIELAB or Hunter Lab, they convert to a much darker red, roughly `#7F152C` to `#9D0C1A`. Those are conversions, not official values. Fabric details are left to a mandatory Turkish Standard, which the regulation doesn't number.
 
-For screens use `#DC0D15`, with white `#FFFFFF`. No government source defines a screen colour for the flag itself. `#DC0D15` comes from the Interior Ministry: its site says its logo uses "bayrak kırmızısı" (flag red), and its corporate identity guide lists that red as `#dc0d15`, Pantone 199 C. The same guide also lists RGB 218 41 28, which doesn't match that hex, so use the hex. If you need the legal colour, for cloth, use the regulation's coordinates.
+For screens use `#DC0D15`, with white `#FFFFFF`. No government source defines a screen colour for the flag itself. `#DC0D15` comes from the Interior Ministry, in two places:
+
+- Its [corporate identity page](https://www.icisleri.gov.tr/kurumsal-kimlik-kilavuz) says its logo uses one colour: "Logoda tek renk, bayrak kırmızısı uygulanmıştır."
+- Its [2026 corporate identity guide](https://www.icisleri.gov.tr/kurumlar/icisleri.gov.tr/icerikYonetimi/kurumsal-kimlik/icisleri_bakanligi_kurumsal_kimlik_final_2026.pdf), printed page 56 (PDF page 55), lists its main corporate red as `#dc0d15`, Pantone 199 C.
+
+Neither place states both facts, so linking them is an inference, and this is the ministry's branding, not a rule about the flag. The guide also lists RGB 218 41 28, which doesn't match that hex, so use the hex. The ministry's [2018 guide](https://www.icisleri.gov.tr/kurumlar/icisleri.gov.tr/icisleri/Kurumsal/icisleribakanligi_kurumsalkimlik.pdf) gave R 227 G 6 B 19, Pantone 185 C, for the same logo. Its current page no longer links that guide. If you need the legal colour, for cloth, use the regulation's coordinates.
 
 ## Sources
 
@@ -60,4 +65,6 @@ Government sources only.
 - Law No. 2893, Türk Bayrağı Kanunu, with the construction table: mevzuat.gov.tr, `https://www.mevzuat.gov.tr/mevzuatmetin/1.5.2893.pdf`.
 - Türk Bayrağı Tüzüğü, No. 85/9034, Articles 2, 3 and 4 and Annexes 1 and 2: mevzuat.gov.tr, `https://www.mevzuat.gov.tr/MevzuatMetin/2.5.859034.pdf`.
 - Ministry of National Education, Türk Bayrağı Kalıbı: `https://www.megep.meb.gov.tr/mte_program_modul/moduller_pdf/T%C3%BCrk%20Bayra%C4%9F%C4%B1%20Kal%C4%B1b%C4%B1.pdf`.
-- Interior Ministry, corporate identity guide: `https://www.icisleri.gov.tr/kurumsal-kimlik-kilavuz`.
+- Interior Ministry, corporate identity page: `https://www.icisleri.gov.tr/kurumsal-kimlik-kilavuz`.
+- Interior Ministry, 2026 corporate identity guide, printed page 56: `https://www.icisleri.gov.tr/kurumlar/icisleri.gov.tr/icerikYonetimi/kurumsal-kimlik/icisleri_bakanligi_kurumsal_kimlik_final_2026.pdf`.
+- Interior Ministry, 2018 corporate identity guide, printed page 8: `https://www.icisleri.gov.tr/kurumlar/icisleri.gov.tr/icisleri/Kurumsal/icisleribakanligi_kurumsalkimlik.pdf`.
